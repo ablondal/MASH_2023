@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<body>
+    <h1>Bowling Balls</h1>
+    <p>
+        Bob has a special research project.
+        He's trying to analyze how bowling balls bounce and collide.
+        Recently, he set up a whole bunch of bowling balls in a large room
+        and started them rolling.
+    </p>
+    <p>
+        At first, Bob was watching and noting all the collisions by hand.
+        Each collision made a big loud satisfying
+        <b><a href="https://youtu.be/51IFubnEAsU?t=32">TOC</a></b>.
+        But the balls just kept on rolling and colliding and
+        <b>TOC</b>ing, and Bob got more and more tired.
+        Finally, Bob had enough, and set up an automated system.
+    </p>
+    <p>
+        He put a sensor in the center of each bowling ball,
+        so he could track exactly where each ball was at all times.
+        Furthermore, he hooked up a microphone to his computer.
+        Every time it heard a <b>TOC</b>, it stored the locations
+        of all the bowling balls.
+    </p>
+    <p>
+        Satisfied, Bob went to bed and left his experiment running
+        overnight.
+        When he woke up, he could still hear the <b>TOC TOC TOC</b>
+        of the bowling balls.
+        He rushed downstairs to see the balls still rolling and colliding!
+        Bob was horrified, because he knew this meant he had generated
+        way too much data to analyze by hand.
+        He has asked for your help.
+    </p>
+    <p>
+        Given the radius of a bowling ball, and the positions of
+        all the balls, recorded as a <b>TOC</b> was heard,
+        can you identify which balls are the ones currently colliding?
+    </p>
+    <h2>Input</h2>
+    <p>
+        The first line of input will consist of two integers $r$ and $n$,
+        denoting the radius of all the bowling balls,
+        and the number of bowling balls.
+    </p>
+    <p>
+        The next $n$ lines will each have two real numbers,
+        $x_i$ and $y_i$ for $1 \leq i \leq n$,
+        denoting the coordinates of the $i$th bowling ball
+        at the instant of the collision.
+    </p>
+    <p>    
+        It is guaranteed that at most two bowling balls are colliding.
+        It is guaranteed that the coordinates are accurate
+        to an absolute or relative value of $10^-6$.
+    </p>
+    <p>
+        $0 \leq r, n, |x_i|, |y_i| \leq 10^5$
+    </p>
+    <h2>Output</h2>
+    <p>
+        If bowling balls $i$ and $j$ are colliding, where $i < j$,
+        print $i$ and $j$ on a line, space-seperated.
+    </p>
+<h3>Sample Input 1</h3>
+<pre>
+1 2
+0 0
+1 0
+</pre>
+<h3>Sample Output 1</h3>
+<pre>
+1 2
+</pre>
+<p>There are only two balls, and they are colliding!</p>
+<h3>Sample Input 2</h3>
+<pre>
+5 4
+0 0
+10 -8
+6 8
+20 0
+</pre>
+<h3>Sample Output 2</h3>
+<pre>
+1 3
+</pre>
+<h3>Sample Input 3</h3>
+<pre>
+5 4
+1.1 1.1
+5.2460825 -8
+7.9 8.9
+12.9 0
+</pre>
+<h3>Sample Output 3</h3>
+<pre>
+1 2
+</pre>
+</body>
