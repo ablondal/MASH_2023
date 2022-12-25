@@ -4,9 +4,9 @@
     <p>
         Bob is taking transit to university.
         Bob’s route starts with a walk to the first bus.
-        Next Bob takes a sequence of N buses, where the $(i + 1)$th bus starts where the $i$th bus ends.
-        Lastly Bob must walk from the last bus to his class at university.
-        Bob has Calculus and wants to wait as long as possible before he leaves.
+        Next, Bob takes a sequence of N buses, where the $(i + 1)$th bus starts where the $i$th bus ends.
+        Lastly, Bob must walk from the last bus to his class at university.
+        Bob has calculus at 8:30am and wants to wait as long as possible before he leaves.
         Help Bob find the latest time he can leave such that he arrives at university the same time he would’ve if he left now ($t$=0).
     </p>
     <h2>Input</h2>
@@ -34,4 +34,15 @@
 </pre>
 <p>If Bob leaves at $t$=0, he will arrive at $t$=26. (Bob arrives at the first bus stop at $t$=1, gets on the bus at $t$=10, gets off the bus at $t$=25 and arrives at university at $t$=26). <br>
     The lastest Bob can leave and still arrive at $t$=26 is $t$=9.</p>
+<h3>Sample Input 2</h3>
+<pre>
+3 5 7
+5 10
+10 20
+30 10
+</pre>
+<h3>Sample Output 2</h3>
+<pre>
+25
+</pre>
 </body>
