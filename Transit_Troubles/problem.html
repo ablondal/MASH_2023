@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<body>
+    <h1>Transit Troubles</h1>
+    <p>
+        Bob is taking transit to university.
+        Bob’s route starts with a walk to the first bus.
+        Next Bob takes a sequence of N buses, where the $(i + 1)$th bus starts where the $i$th bus ends.
+        Lastly Bob must walk from the last bus to his class at university.
+        Bob has Calculus and wants to wait as long as possible before he leaves.
+        Help Bob find the latest time he can leave such that he arrives at university the same time he would’ve if he left now ($t$=0).
+    </p>
+    <h2>Input</h2>
+    <p>
+        The first line contains three integers $N$, $w_1$, $w_2$, where $N$ is the number of buses Bob needs to take, $w_1$ is the time it takes to walk from Bob’s home to the first bus, and $w_2$ is the time it takes to walk from the last bus to the university.
+        The next $N$ lines contain two integers $a_i$ and $b_i$. The $i$th bus comes every $a_i$ minutes starting from $t$=0, and $b_i$ is the length of the $i$th bus ride (in minutes). You can assume that these are extremely consistent buses that follow their schedule exactly. If Bob arrives at a bus station at time $t$ and the bus leaves at time $t$, assume the bus driver lets Bob onto the bus before leaving.
+    </p>
+    <p>
+        $1 \leq N \leq 1e5$ <br>
+        $1 \leq w_1, w_2, a_i, b_i \leq 1000$ <br>
+        All inputs are integers.
+    </p>
+    <h2>Output</h2>
+    <p>
+        A single integer $t$, the latest time that Bob can leave such that he will arrive at the same time as he would have if he left at $t$=0. 
+    </p>
+<h3>Sample Input 1</h3>
+<pre>
+1 1 1
+10 15
+</pre>
+<h3>Sample Output 1</h3>
+<pre>
+9
+</pre>
+<p>If Bob leaves at $t$=0, he will arrive at $t$=26. (Bob arrives at the first bus stop at $t$=1, gets on the bus at $t$=10, gets off the bus at $t$=25 and arrives at university at $t$=26). <br>
+    The lastest Bob can leave and still arrive at $t$=26 is $t$=9.</p>
+</body>
