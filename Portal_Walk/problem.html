@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<body>
+    <h1>Portal Walk</h1>
+    <p>
+        Bob magically got teleported into a 1-dimensional world and needs your help to escape! 
+        Bob is currently at position 0, and needs to reach the exit at position $X$ that will bring him back to 3-dimensions. 
+        In between Bob and the exit are $N$ pairs of portals.
+        If Bob walks into one of these portals, he will be instantly teleported to the other portal in the pair. 
+        In this 1-dimensional world, Bob can only walk forwards and moves exactly one position forward in each step. 
+        Teleporting between portals does not count as a step. 
+        Bob needs to know the number of steps it will take him to reach the exit so he can mentally prepare for the journey ahead. 
+        Can you help him?
+    </p>
+    <h2>Input</h2>
+    <p>
+        The first line contains two integers $N$ and $X$, the number of pairs of portals and the position of the exit.
+    </p>
+    <p>
+        The next $N$ lines each contain two integers, $a_i$ and $b_i$, the locations of the ith pair of portals. <br>
+
+        It is guaranteed that no two portals are in the same location.
+    </p>
+    <p>
+        $1 \leq N \leq 1000$ <br>
+        $1 \leq X \leq 1e5$ <br>
+        $1 \leq a_i, b_i \leq X <br>
+        All inputs are integers.
+    </p>
+    <h2>Output</h2>
+    <p>
+        The number of steps it will take Bob to reach the exit. 
+    </p>
+<h3>Sample Input 1</h3>
+<pre>
+1 10
+2 5
+</pre>
+<h3>Sample Output 1</h3>
+<pre>
+7
+</pre>
+<p>
+    Bob starts at position 0. <br>
+    After 2 steps, Bob gets teleported from position 2 to position 5. <br>
+    After 7 steps, Bob reaches the exit at position 10. <br>
+</p>
+<h3>Sample Input 2</h3>
+<pre>
+3 20
+11 3
+5 15
+16 19
+</pre>
+<h3>Sample Output 2</h3>
+<pre>
+17
+</pre>
+<p>
+    Bob starts at position 0. <br>
+    After 3 steps, Bob gets teleported from position 3 to position 11 (portal pair 1). <br>
+    After 7 steps, Bob gets teleported from position 15 to position 5 (portal pair 2). <br>
+    After 13 steps, Bob gets teleported from position 11 to position 3 (portal pair 1). <br>
+    After 15 steps, Bob gets teleported from position 5 to position 15 (portal pair 2). <br>
+    After 16 steps, Bob gets teleported from position 16 to position 19 (portal pair 3). <br>
+    After 17 steps, Bob reaches the exit at position 20. <br>
+</p>
+</body>
