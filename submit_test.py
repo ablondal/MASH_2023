@@ -8,7 +8,7 @@
 
 import subprocess, traceback, os, sys
 
-run_code = sys.argv[2]
+run_code = sys.argv[2:]
 folder = sys.argv[1]
 time_lim = 1
 
@@ -42,7 +42,7 @@ for c in test_cases:
 	print(c+": \033[1m\033[33mRunning\033[0m", end=' ', flush=True)
 	try:
 		outp = subprocess.run(
-			[run_code],
+			run_code,
 			stdin=open(c+'.in', 'r'),
 			capture_output=True,
 			text=True,
