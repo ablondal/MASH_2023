@@ -3,10 +3,11 @@
     <h1>Prime Tiling</h1>
     <p>
         After saving for 30 years, Bob was finally able to buy a new house in the Vancouver area, and now wants to re-tile the floor.
-        The area that Bob wants to re-tile is an $N x M$ rectangle.
-        Unfortunately, the only tiles that Bob can buy from the store are rectangles with dimensions $1 x P$, where $P$ is a prime number.
-        Bob has OCD and wants all of the tiles he uses to have the same size.
-        For a given N, M and P, help Bob determine if it is possible to tile his $N x M$ floor with $1 x P$ tiles such that there are no overlapping tiles and the floor is completely covered.
+        The area that Bob wants to re-tile is rectangle shaped, $N$ metres by $M$ metres.
+        Unfortunately, the only tiles that Bob can buy from the store are rectangular tiles with dimensions of $1 x P$ metres, where $P$ is a prime number.
+        Bob loves a neat floor and wants all of the tiles he uses to have the same size.
+        He also does not want to cut any tiles.
+        For a given $N$, $M$ and $P$, help Bob determine if it is possible to tile his $N x M$ floor with $1 x P$ tiles such that there are no overlapping tiles and the floor is completely covered.
     </p>
     <h2>Input</h2>
     <p>
@@ -14,12 +15,12 @@
     </p>
     <p>
         $1 \leq N, M \leq 1000$ <br>
-        $2 \leq p \leq 100$, p is guarunteed to be a prime number. <br>
+        $2 \leq p \leq 100$, $P$ is guaranteed to be a prime number. <br>
     </p>
     <h2>Output</h2>
     <p>
-        "YES" if it is possible for Bob to tile his $N x M$ floor using only tiles of dimension $1 x P$. <br>
-        "NO" if it is not possible.
+        <code>YES</code> if it is possible for Bob to tile his $N x M$ floor using only tiles of dimension $1 x P$. <br>
+        <code>NO</code> if it is not possible.
     </p>
 <h3>Sample Input 1</h3>
 <pre>
