@@ -50,9 +50,12 @@
         at the instant of the collision.
     </p>
     <p>    
-        It is guaranteed that at most two bowling balls are colliding.
+        It is guaranteed that exactly two bowling balls are colliding,
+        and all other bowling balls are not colliding.
+        It is guaranteed that non-colliding balls have distance of at least
+        $r/100$ between them.
         It is guaranteed that the coordinates are accurate
-        to an absolute or relative value of $10^-6$.
+        to 6 decimal points.
     </p>
     <p>
         $0 \leq r, n, |x_i|, |y_i| \leq 10^5$
@@ -66,7 +69,7 @@
 <pre>
 1 2
 0 0
-1 0
+2 0
 </pre>
 <h3>Sample Output 1</h3>
 <pre>
