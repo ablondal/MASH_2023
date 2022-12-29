@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<body>
+    <h1>City Planning</h1>
+    <p>
+        Alice just started her new job as city planner.
+    </p>
+    <p>
+        She is super fond of walkable cities, and wants to make her city as
+        walkable as possible.
+        However, she knows that she can't just eliminate cars overnight,
+        as many businesses would be quite unhappy about that.
+        Instead, she's decided to make all of the streets in the city one-way streets.
+        This way, she can make the streets narrower, add a bike lane everywhere,
+        and widen the sidewalk!
+    </p>
+    <p>
+        The major snag in this plan is that after her changes,
+        there should still be at least one way
+        to get from anywhere in the city to anywhere else by car.
+        Alice is looking hard at the city, but needs your help in figuring out
+        if her plan is even possible!
+    </p>
+    <h2>Input</h2>
+    <p>
+        The first line of input will consist of two integers $N$ and $M$,
+        the number of locations in the city, and the number of streets
+        in the city, respectively.
+    </p>
+    <p>
+        The next $M$ lines will consist each of two integers $a$ and $b$,
+        indicating that there is a street between locations $a$ and $b$.
+        It is guaranteed that there is currently at least one way to get from
+        every location to every other location.
+        There is at most one street connecting any two locations.
+    </p>
+    <p>
+        $1 \leq N \leq 100$, $N-1 \leq M \leq N(N-1)/2$ <br>
+        $1 \leq a, b \leq N$
+    </p>
+    <h2>Output</h2>
+    <p>
+        If there exists a way of turning all streets into one-way streets such
+        that every location can be reached from every location, print <code>YES</code>.
+    </p>
+    <p>
+        Otherwise, print <code>NO</code>.
+    </p>
+<h3>Sample Input 1</h3>
+<pre>
+2 1
+1 2
+</pre>
+<h3>Sample Output 1</h3>
+<pre>
+NO
+</pre>
+<p>
+    If the street were directed from 1 to 2, there would be no way from 2 to 1.
+    Likewise if the street were directed from 2 to 1.
+</p>
+<h3>Sample Input 2</h3>
+<pre>
+3 3
+3 1
+2 1
+3 2
+</pre>
+<h3>Sample Output 2</h3>
+<pre>
+YES
+</pre>
+<p>
+    The streets can be directed <code>3 -> 2 -> 1 -> 3</code>.
+</p>
+</body>
