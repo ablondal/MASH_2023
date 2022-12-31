@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<body>
+    <h1>Climbing Wall</h1>
+    <p>
+        Bob is starting to learn how to climb!
+        Right now, he's at a climbing gym, considering the wall in front of him.
+    </p>
+    <p>
+        He climbs by occupying a single handhold, and moving to one within 5 feet of
+        his current handhold, repeating over and over.
+        His goal is to touch the top of the wall, which he can do from a handhold
+        within 5 feet of it.
+        He starts at the bottom of the wall, and can reach up to 5 feet up to the first
+        handhold.
+        Furthermore, Bob is an impatient climber, and will only move to a handhold
+        strictly higher on the wall than his current one.
+    </p>
+    <p>
+        However, Bob is also savvy, and wants to find the easiest way up the wall.
+        He's assigned a score between 0 and 9 to each handhold, its difficulty.
+        Help him find the path that minimizes the sum of the difficulty of handholds!
+    </p>
+    <h2>Input</h2>
+    <p>
+        The first line will consist of two integers $h$ and $w$, the height
+        and width of the wall in feet. <br>
+        The next $h+2$ lines each consist of $w+2$ characters describing the wall.
+        Each character consists of a 1 square foot area.<br>
+        A number indicates a handhold of that difficulty.<br>
+        A dot indicates an area without a handhold.<br>
+        Please look at the sample outputs for examples.
+    </p>
+    <p>
+        $1 \leq h \leq 1000$<br>
+        $1 \leq w \leq 100$
+    </p>
+    <h2>Output</h2>
+    <p>
+        Output the minimum sum of handhold difficulties that Bob must take to reach
+        the top of the wall.<br>
+        If it is impossible to reach the top of the wall, output <code>-1</code>.
+    </p>
+<h3>Sample Input 1</h3>
+<pre>
+8 11
++-----------+
+|...........|
+|...........|
+|.......3...|
+|...4.......|
+|...........|
+|......2....|
+|...........|
+|...........|
++-----------+
+</pre>
+<h3>Sample Output 1</h3>
+<pre>
+4
+</pre>
+<p>
+    Bob can reach the handholds of difficulty 2 and 4 from the bottom.
+    From the handhold 4, he can reach the top of the climbing wall, but he cannot
+    from the handhold 2.<br>
+    Thus his best path is to move to handhold 4, then reach the top of the wall.
+</p>
+<h3>Sample Input 2</h3>
+<pre>
+13 15
++---------------+
+|...............|
+|1.............4|
+|...............|
+|...............|
+|...............|
+|...3.......1...|
+|...............|
+|...............|
+|.......1.......|
+|...............|
+|...............|
+|...............|
+|...............|
++---------------+
+</pre>
+<h3>Sample Output 2</h3>
+<pre>
+5
+</pre>
+<h3>Sample Input 3</h3>
+<pre>
+13 15
++---------------+
+|...............|
+|1.............4|
+|...............|
+|...............|
+|...............|
+|...3.......1...|
+|...............|
+|...............|
+|...............|
+|.......1.......|
+|...............|
+|...............|
+|...............|
++---------------+
+</pre>
+<h3>Sample Output 3</h3>
+<pre>
+-1
+</pre>
+</body>
