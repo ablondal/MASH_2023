@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<body>
+    <h1>Soldier Game</h1>
+    <p>
+        Alice and Bob are playing a game.
+        They have a $1 \times 32$ board in front of them,
+        with toy soldiers on some of the squares.
+    </p>
+    <p>
+        The rules of the game are simple:
+        Players take turns removing one of the soldiers.
+        The key is that a soldier can only be removed if there is a soldier
+        in one of its neighbouring squares.
+    </p>
+    <p>
+        If a player cannot make any moves, they lose.
+        Bob goes first.
+        Assuming that both players play optimally, who wins?
+    </p>
+    <h2>Input</h2>
+    <p>
+        The input will consist of a string of 32 characters, representing the board.
+    </p>
+    <p>
+        A <code>!</code> represents a square with a soldier, and a <code>.</code>
+        is a square without a soldier.
+    </p>
+    <h2>Output</h2>
+    <p>
+        <code>Bob</code> if Bob wins.<br>
+        <code>Alice</code> if Alice wins.
+    </p>
+<h3>Sample Input 1</h3>
+<pre>
+............!!!.................
+</pre>
+<h3>Sample Output 1</h3>
+<pre>
+Bob
+</pre>
+<p>
+    Bob can remove the middle soldier.
+    Then, the soldiers left each stand alone, so Alice has no moves and loses.
+</p>
+<h3>Sample Input 2</h3>
+<pre>
+............!!...!!.............
+</pre>
+<h3>Sample Output 2</h3>
+<pre>
+Alice
+</pre>
+<p>
+    No matter whether Bob removes a soldier from the first or second group,
+    Alice can then remove one from the other group, and Bob will have no moves
+    and lose.
+</p>
+<h3>Sample Input 3</h3>
+<pre>
+...........!!!!..!!!............
+</pre>
+<h3>Sample Output 3</h3>
+<pre>
+Bob
+</pre>
+<h3>Sample Input 4</h3>
+<pre>
+!!..!!!!!!!!!!!!!!!!!.!.!!!.!!!!
+</pre>
+<h3>Sample Output 4</h3>
+<pre>
+Alice
+</pre>
+</body>
