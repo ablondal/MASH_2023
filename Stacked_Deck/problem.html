@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<body>
+    <h1>Stacked Deck</h1>
+    <p>
+        Alice and Bob are playing a game with a custom deck of cards.
+        The deck contains $N$ cards, each with a single number on it.
+    </p>
+    <p>
+        The game works as follows:
+        Alice and Bob are each dealt $K$ cards.
+        In a single round, both players choose one card from their hand and play it simultaneously. 
+        The person who played the card with the higher number gets $(a-b)^2$ points, where $a$ is the number on the higher card and $b$ is the number on the lower card.
+        If both players play a card with the same number, nobody gets points in that round.
+        Once a card is played, it can not be used again.
+        After $K$ rounds, both players run out of cards and the person with the higher number of points wins.
+    </p>
+    <p>
+        Bob is tired of losing, so he decided to stack the deck so that he gets the $K$ highest cards and Alice gets the $K$ lowest cards. 
+        Despite stacking the deck, Bob doesn’t know what order Alice will play her cards. 
+        How many points is Bob <b>guaranteed</b> to win by no matter how Alice plays her cards?
+    </p>
+    <h2>Input</h2>
+    <p>
+        The first line contains two integers $N$ and $K$, the number of cards in the deck and the number of cards dealt to each player respectively.
+    </p>
+    <p>
+        The next line contains $N$ integers, where the $a_i$ is the number on the $i$th card in the deck. 
+    </p>
+    <p>
+        $1 \leq N \leq 1e5$ <br>
+        $1 \leq K \leq N/2$ <br>
+        $1 \leq a_i \leq 1e5 <br>
+    </p>
+    <h2>Output</h2>
+    <p>
+        The number of points that Bob is guarunteed to win by after stacking the deck, regardless of the order that Alice plays her cards.
+    </p>
+<h3>Sample Input 1</h3>
+<pre>
+3 1
+4 2 5
+</pre>
+<h3>Sample Output 1</h3>
+<pre>
+9
+</pre>
+<p>
+    Bob chooses to stack the deck such that he gets the card with $5$, and Alice gets the card with $2$. <br>
+    During round 1, Bob plays $5$ and Alice plays $2$ (they only have one option for the card to play). Bob gets $(5-2)^2 = 9$ points. <br>
+    After the game ends, Bob has 9 points and Alice has 0 points.
+</p>
+<h3>Sample Input 2</h3>
+<pre>
+6 2
+3 1 5 6 3 5
+</pre>
+<h3>Sample Output 2</h3>
+<pre>25</pre>
+<p>
+    After stacking the deck, Bob is dealt cards $5$, $6$ and Alice is dealt cards $1$, $3$<br>
+    There are four possibilities for the order that cards are played: <br>
+    <br>
+    &emsp;<b>Possibility 1:</b><br>
+    &emsp;&emsp;Round 1: Alice plays $1$, Bob plays $5$.<br>
+    &emsp;&emsp;Round 2: Alice plays $3$, Bob plays $6$.<br>
+    &emsp;&emsp;Bob wins by 25 points.<br>
+    <br>
+    &emsp;<b>Possibility 2:</b><br>
+    &emsp;&emsp;Round 1: Alice plays $1$, Bob plays $6$.<br>
+    &emsp;&emsp;Round 2: Alice plays $3$, Bob plays $5$.<br>
+    &emsp;&emsp;Bob wins by 29 points.<br>
+    <br>
+    &emsp;<b>Possibility 3:</b><br>
+    &emsp;&emsp;Round 1: Alice plays $3$, Bob plays $5$.<br>
+    &emsp;&emsp;Round 2: Alice plays $1$, Bob plays $6$.<br>
+    &emsp;&emsp;Bob wins by 29 points.<br>
+    <br>
+    &emsp;<b>Possibility 4:</b><br>
+    &emsp;&emsp;Round 1: Alice plays $3$, Bob plays $6$.<br>
+    &emsp;&emsp;Round 2: Alice plays $1$, Bob plays $5$.<br>
+    &emsp;&emsp;Bob wins by 25 points.<br>
+    <br>
+    Therefore, Bob is guaranteed to win by at least 25 points no matter the order that the cards are played.
+</p>
+</body>
