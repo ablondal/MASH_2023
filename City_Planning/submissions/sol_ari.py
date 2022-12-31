@@ -41,6 +41,7 @@ isbridge(1, -1)
 # print(len(bridges))
 # print('\n'.join([' '.join(map(str, b)) for b in bridges]))
 
+# print(len(bridges))
 if len(bridges) > 0:
     print("NO")
 else:
