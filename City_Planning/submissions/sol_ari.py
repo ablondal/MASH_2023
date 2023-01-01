@@ -16,7 +16,7 @@ timer = 0
 bridges = []
 
 import sys
-sys.setrecursionlimit(1000000)
+# sys.setrecursionlimit(1000000)
 
 def isbridge(curr, prev=-1):
     global timer

@@ -10,8 +10,10 @@ for y in range(1, h+2):
         cost = 1<<24
         if ord(wall[y][x]) >= ord('0') and ord(wall[y][x]) <= ord('9'):
             cost = int(wall[y][x])
-        if wall[y][x] == '-':
+        elif wall[y][x] == '-':
             cost = 0
+        else:
+            continue
         c2 = 1<<24
         for py in range(max(0, y-5), y):
             for px in range(max(0, x-5), min(w+2, x+6)):
