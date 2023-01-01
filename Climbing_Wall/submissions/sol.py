@@ -14,9 +14,10 @@ for y in range(1, h+2):
             cost = 0
         c2 = 1<<24
         for py in range(max(0, y-5), y):
-            for px in range(max(0, x-5), min(h+2, x+6)):
+            for px in range(max(0, x-5), min(w+2, x+6)):
                 if (x-px)*(x-px) + (y-py)*(y-py) <= 25:
                     # print('hi')
+                    #print(py, px)
                     c2 = min(c2, DP[py][px])
         DP[y][x] = c2 + cost
         # print(DP[y][x])
