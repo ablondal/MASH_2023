@@ -19,10 +19,11 @@ def recurscan(f_path):
 		if o.is_file() and o.path.endswith('.in'):
 			tests.append(o.path[:-3])
 		elif o.is_file() and o.name == 'problem.yaml':
+			print('found')
 			a = open(o.path, 'r').read().split()
 			try:
 				i = a.index('time_sec:')
-				time_lim = len(a[i+1])
+				time_lim = int(a[i+1])
 				print('time limit:', time_lim)
 			except:
 				pass
